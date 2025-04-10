@@ -1,149 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Twinkle Jariwala | Data Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    :root {
+      --primary-color: #5a189a;
+      --accent-color: #e0bbff;
+      --bg-color: #ffffff;
+      --text-color: #333;
     }
     body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #f4f4f4;
-      color: #333;
-      line-height: 1.6;
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      background-color: var(--bg-color);
+      color: var(--text-color);
     }
-    header {
-      background: linear-gradient(to right, #5a189a, #9d4edd);
-      color: #fff;
-      padding: 2rem 0;
-      text-align: center;
+    aside {
+      width: 250px;
+      height: 100vh;
+      background-color: var(--primary-color);
+      color: white;
+      padding: 2rem 1rem;
+      position: fixed;
     }
-    header h1 {
-      font-size: 2.5rem;
+    aside h1 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
     }
-    header p {
-      font-size: 1.2rem;
-    }
-    nav {
-      margin-top: 1rem;
-    }
-    nav a {
-      color: #fff;
-      margin: 0 15px;
+    aside nav a {
+      display: block;
+      color: white;
       text-decoration: none;
+      margin: 1rem 0;
       font-weight: 600;
     }
-    .container {
-      max-width: 1000px;
-      margin: 2rem auto;
-      padding: 0 1.5rem;
+    main {
+      margin-left: 250px;
+      padding: 2rem;
+      max-width: 900px;
+    }
+    section {
+      margin-bottom: 3rem;
     }
     section h2 {
-      color: #5a189a;
+      font-size: 1.8rem;
+      color: var(--primary-color);
       margin-bottom: 1rem;
-      font-size: 2rem;
     }
-    .project-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.5rem;
+    .project {
+      margin-bottom: 2rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1rem;
     }
-    .project-card {
-      background-color: #fff;
-      padding: 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
-    }
-    .project-card:hover {
-      transform: translateY(-5px);
-    }
-    .project-card h3 {
+    .project img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
       margin-bottom: 0.5rem;
-      color: #333;
     }
-    .project-card p {
+    .project h3 {
+      margin-bottom: 0.3rem;
+      color: var(--text-color);
+    }
+    .project p {
       font-size: 0.95rem;
-      color: #555;
     }
     .tags {
+      font-size: 0.8rem;
+      color: var(--primary-color);
+      background: var(--accent-color);
+      padding: 0.2rem 0.4rem;
+      border-radius: 5px;
       display: inline-block;
       margin-top: 0.5rem;
+    }
+    .project-links {
+      margin-top: 0.5rem;
+    }
+    .project-links a {
+      margin-right: 1rem;
       font-size: 0.85rem;
-      background: #e0bbff;
-      color: #5a189a;
-      padding: 0.2rem 0.5rem;
-      border-radius: 5px;
+      text-decoration: none;
+      color: var(--primary-color);
+      font-weight: 600;
+    }
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .skills span {
+      background: #eee;
+      padding: 0.4rem 0.7rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
     }
     footer {
       text-align: center;
-      padding: 1.5rem;
-      background: #5a189a;
-      color: #fff;
-      margin-top: 2rem;
+      padding: 1rem;
+      color: #777;
     }
   </style>
 </head>
-
 <body>
-  <header>
+  <aside>
     <h1>Twinkle Jariwala</h1>
-    <p>Data Analyst | Data Scientist | ML Enthusiast</p>
     <nav>
       <a href="#about">About</a>
+      <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
       <a href="#blog">Blog</a>
       <a href="#contact">Contact</a>
     </nav>
-  </header>
-
-  <section id="about" class="container">
-    <h2>About Me</h2>
-    <p>I’m a Data Services Analyst with 3+ years of experience in data analysis, ETL pipeline development, and machine learning. I specialize in turning data into insights and creating scalable, data-driven solutions that power decision-making.</p>
-  </section>
-
-  <section id="projects" class="container">
-    <h2>Projects</h2>
-    <div class="project-grid">
-      <div class="project-card">
+  </aside>
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I'm a Data Services Analyst with 3+ years of experience turning data into insights. I specialize in Python, SQL, ETL pipelines, Azure, and machine learning, with a strong focus on building scalable, AI-driven solutions.</p>
+    </section>
+    <section id="skills">
+      <h2>Skills & Tools</h2>
+      <div class="skills">
+        <span>Python</span><span>SQL</span><span>Tableau</span><span>Power BI</span><span>Azure</span>
+        <span>Databricks</span><span>Snowflake</span><span>ETL</span><span>Scikit-learn</span><span>TensorFlow</span>
+      </div>
+    </section>
+    <section id="projects">
+      <h2>Featured Projects</h2>
+      <div class="project">
+        <img src="images/accident-analysis.jpg" alt="US Traffic Accident Analysis">
         <h3>US Traffic Accident Analysis</h3>
         <p>Exploratory analysis on 3M+ accident records revealing trends by geography, weather, and time.</p>
+        <div class="project-links">
+          <a href="#">GitHub</a>
+          <a href="#">Demo</a>
+        </div>
         <span class="tags">Python, Pandas, Seaborn</span>
       </div>
-      <div class="project-card">
+      <div class="project">
+        <img src="images/customer-segmentation.jpg" alt="Customer Segmentation">
         <h3>Customer Segmentation</h3>
         <p>K-Means clustering of customer purchase behavior to aid marketing strategy.</p>
+        <div class="project-links">
+          <a href="#">GitHub</a>
+          <a href="#">Demo</a>
+        </div>
         <span class="tags">Python, Scikit-learn</span>
       </div>
-      <div class="project-card">
+      <div class="project">
+        <img src="images/sp500-forecast.jpg" alt="S&P 500 Forecasting">
         <h3>S&P 500 Forecasting</h3>
         <p>LSTM model built to predict future stock index trends using time series data.</p>
+        <div class="project-links">
+          <a href="#">GitHub</a>
+          <a href="#">Demo</a>
+        </div>
         <span class="tags">Python, TensorFlow</span>
       </div>
-    </div>
-  </section>
-
-  <section id="blog" class="container">
-    <h2>Blog</h2>
-    <p>Coming soon: articles on data science, ML tutorials, and project walk-throughs!</p>
-  </section>
-
-  <section id="contact" class="container">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:jariwala.twinkle09@gmail.com">jariwala.twinkle09@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/your-link" target="_blank">linkedin.com/in/your-link</a></p>
-    <p><a href="Twinkle_Jariwala_Resume.pdf" download>Download Resume</a></p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Twinkle Jariwala</p>
-  </footer>
+    </section>
+    <section id="blog">
+      <h2>Blog</h2>
+      <p>Coming soon: Articles and tutorials on data science, machine learning, and project walkthroughs.</p>
+    </section>
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:jariwala.twinkle09@gmail.com">jariwala.twinkle09@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/your-link" target="_blank">linkedin.com/in/your-link</a></p>
+    </section>
+    <footer>
+      <p>&copy; 2025 Twinkle Jariwala</p>
+    </footer>
+  </main>
 </body>
 </html>
