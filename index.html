@@ -1,29 +1,112 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Twinkle Jariwala | Data Portfolio</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(to right, #5a189a, #9d4edd);
+      color: #fff;
+      padding: 2rem 0;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+    }
+    nav {
+      margin-top: 1rem;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
+    section h2 {
+      color: #5a189a;
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+    .project-card {
+      background-color: #fff;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+    .project-card h3 {
+      margin-bottom: 0.5rem;
+      color: #333;
+    }
+    .project-card p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+    .tags {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.85rem;
+      background: #e0bbff;
+      color: #5a189a;
+      padding: 0.2rem 0.5rem;
+      border-radius: 5px;
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: #5a189a;
+      color: #fff;
+      margin-top: 2rem;
+    }
+  </style>
 </head>
+
 <body>
   <header>
-    <div class="container">
-      <h1>Twinkle Jariwala</h1>
-      <p>Data Analyst | Data Scientist | ML Enthusiast</p>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#blog">Blog</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
+    <h1>Twinkle Jariwala</h1>
+    <p>Data Analyst | Data Scientist | ML Enthusiast</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
   <section id="about" class="container">
     <h2>About Me</h2>
-    <p>Data Services Analyst with 3+ years of experience in data analysis, machine learning, and building AI-driven solutions. Skilled in Python, SQL, Tableau, and Microsoft Azure, with a strong focus on optimizing ETL pipelines and delivering actionable insights.</p>
+    <p>I’m a Data Services Analyst with 3+ years of experience in data analysis, ETL pipeline development, and machine learning. I specialize in turning data into insights and creating scalable, data-driven solutions that power decision-making.</p>
   </section>
 
   <section id="projects" class="container">
@@ -31,25 +114,25 @@
     <div class="project-grid">
       <div class="project-card">
         <h3>US Traffic Accident Analysis</h3>
-        <p>EDA on 3M+ accident records to identify trends by weather, location, and time.</p>
+        <p>Exploratory analysis on 3M+ accident records revealing trends by geography, weather, and time.</p>
         <span class="tags">Python, Pandas, Seaborn</span>
       </div>
       <div class="project-card">
         <h3>Customer Segmentation</h3>
-        <p>Clustered customers using K-Means for marketing insights.</p>
+        <p>K-Means clustering of customer purchase behavior to aid marketing strategy.</p>
         <span class="tags">Python, Scikit-learn</span>
       </div>
       <div class="project-card">
-        <h3>COVID-19 + Happiness</h3>
-        <p>Explored links between pandemic data and world happiness metrics.</p>
-        <span class="tags">Python, Data Analysis</span>
+        <h3>S&P 500 Forecasting</h3>
+        <p>LSTM model built to predict future stock index trends using time series data.</p>
+        <span class="tags">Python, TensorFlow</span>
       </div>
     </div>
   </section>
 
   <section id="blog" class="container">
     <h2>Blog</h2>
-    <p>Coming soon: insights, case studies, and tips on data science and analytics!</p>
+    <p>Coming soon: articles on data science, ML tutorials, and project walk-throughs!</p>
   </section>
 
   <section id="contact" class="container">
@@ -62,7 +145,5 @@
   <footer>
     <p>&copy; 2025 Twinkle Jariwala</p>
   </footer>
-
-  <script src="js/main.js"></script>
 </body>
 </html>
